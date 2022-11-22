@@ -1,6 +1,8 @@
 package com.example.tripmiracle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,10 @@ public class History extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        RecyclerView recyclerView = findViewById(R.id.historyRecyclerView);
+        HistoryAdapter adapter = new HistoryAdapter(this,booking);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         binding = ActivityHomePageBinding.inflate(getLayoutInflater());
         LinearLayout view = binding.getRoot();
