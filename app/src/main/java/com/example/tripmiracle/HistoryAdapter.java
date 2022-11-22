@@ -35,7 +35,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public void onBindViewHolder(@NonNull HistoryAdapter.MyViewHolder holder, int position) {
         holder.roomNo.setText(booking.get(position).getRoomNo());
         holder.historyDuration.setText(booking.get(position).getHistoryDuration());
-        holder.historyTime.setText(booking.get(position.getHistoryTime()));
+        holder.historyTime.setText(booking.get(position).getHistoryTime());
     }
 
     @Override

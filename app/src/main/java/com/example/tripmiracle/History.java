@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 
 import com.example.tripmiracle.databinding.ActivityHomePageBinding;
 
+import java.util.ArrayList;
+
 public class History extends AppCompatActivity {
 
     private ActivityHomePageBinding binding;
@@ -19,6 +21,13 @@ public class History extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+
+        ArrayList<Booking> booking = new ArrayList<>();
+        Booking booking1 = new Booking(1000, "3 hours", "3/4/2022");
+        Booking booking2 = new Booking(2000, "48 hours", "1/1/2022");
+        booking.add(booking1);
+        booking.add(booking2);
+
         RecyclerView recyclerView = findViewById(R.id.historyRecyclerView);
         HistoryAdapter adapter = new HistoryAdapter(this,booking);
         recyclerView.setAdapter(adapter);
