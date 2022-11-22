@@ -15,7 +15,9 @@
     <string name="book_title">Booking</string>
     <string name="book_select_room">Select room</string>
     <string name="book_select_date">Select date</string>
+    <string name="book_display_date">Date</string>
     <string name="book_select_duration">Select duration</string>
+    <string name="book_select_nights">Nights</string>
     <string name="book_return_homepage">Return To Home Page</string>
 
     <string name="check_title">Check current booking</string>
