@@ -4,9 +4,26 @@
     <string name="username">USERNAME:</string>
     <string name="password">PASSWORD:</string>
     <string name="login">LOGIN</string>
+    <string name="signup">SIGN UP</string>
     <string name="forgotPassword">Forgot Password?</string>
+
     <string name="homepage">Welcome to TripMiracle!</string>
     <string name="booking">Book</string>
     <string name="check">Check Current Booking</string>
     <string name="history">Booking History</string>
+
+    <string name="book_title">Booking</string>
+    <string name="book_select_room">Select room</string>
+    <string name="book_select_date">Select date</string>
+    <string name="book_select_duration">Select duration</string>
+
+    <string name="check_title">Check current booking</string>
+    <string name="check_room">Room</string>
+    <string name="check_date">Date</string>
+    <string name="check_duration">Duration</string>
+
+    <string name="history_title">Booking history</string>
+    <string name="history_room">Room</string>
+    <string name="history_date">Date</string>
+    <string name="history_duration">Duration</string>
 </resources>
