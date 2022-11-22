@@ -23,8 +23,8 @@ public class History extends AppCompatActivity {
         setContentView(R.layout.activity_history);
 
         ArrayList<Booking> booking = new ArrayList<>();
-        Booking booking1 = new Booking(1000, "3 days 2 nights", "3/4/2022");
-        Booking booking2 = new Booking(2000, "2 days 1 night", "1/1/2022");
+        Booking booking1 = new Booking(1000, "2 nights", "3/4/2022");
+        Booking booking2 = new Booking(2000, "1 night", "1/1/2022");
         booking.add(booking1);
         booking.add(booking2);
 
