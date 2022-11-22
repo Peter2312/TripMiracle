@@ -29,4 +29,9 @@
     <string name="history_date">Date</string>
     <string name="history_duration">Duration</string>
     <string name="history_return_homepage">Return To Home Page</string>
+
+    <string name="history_row_roomNo">Room No</string>
+    <string name="history_row_time">Time</string>
+    <string name="history_row_duration">Duration</string>
+
 </resources>
