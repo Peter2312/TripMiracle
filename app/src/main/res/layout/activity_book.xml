@@ -105,7 +105,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp" />
 
-   <!-- <Button
+    <Button
         android:id="@+id/returnHomePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,6 +113,6 @@
         android:layout_marginTop="10dp"
         android:minHeight="48dp"
         android:text="@string/book_return_homepage"
-        tools:ignore="TouchTargetSizeCheck" />-->
+        tools:ignore="TouchTargetSizeCheck" />
 
 </LinearLayout>

@@ -65,14 +65,14 @@ public class BookActivity extends AppCompatActivity {
             }
         });
 
-        /*binding.returnHomePage.setOnClickListener(new View.OnClickListener() {
+        binding.returnHomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookActivity.this, HomePage.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(BookActivity.this, HomePage.class);
+                startActivity(intent);*/
                 finish();
             }
-        });*/
+        });
 
         int room = 120;
 
