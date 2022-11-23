@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.tripmiracle.databinding.ActivityHomePageBinding;
+import com.example.tripmiracle.databinding.ActivityMainBinding;
 
 public class HomePage extends AppCompatActivity {
+
+    public static final String USERNAME = "com.example.tripmiracle.USERNAME";
 
     private ActivityHomePageBinding binding;
 
@@ -22,30 +25,14 @@ public class HomePage extends AppCompatActivity {
         LinearLayout view = binding.getRoot();
         setContentView(view);
 
+        Intent intent = getIntent();
+        binding.usernameDisplay.setText(intent.getStringExtra(USERNAME));
+
         binding.booking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, BookActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        binding.checkBooking.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, CheckBooking.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        binding.bookHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, History.class);
-                startActivity(intent);
-                finish();
+                Intent intent1 = new Intent(HomePage.this, BookActivity.class);
+                startActivity(intent1);
             }
         });
     }

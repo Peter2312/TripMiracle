@@ -49,16 +49,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/book_display_date"
+        android:text="*insert calendar*"
         android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/display_date"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/book_select_date"
-        android:id="@+id/select_date"/>
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,42 +60,20 @@
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
 
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:text="*choices of 1-7 days, weeks, months*"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp" />
 
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
-
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/book_select_nights"
-        android:textSize="20dp"/>
-
-    </LinearLayout>
 
     <Button
+        android:id="@+id/bookbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/booking"
-        android:id="@+id/book"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/book_return_homepage"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:id="@+id/returnHomePage"/>
+        android:layout_marginTop="40dp"/>
 
 </LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "692154919696",
+    "project_id": "tripmiracle-7c261",
+    "storage_bucket": "tripmiracle-7c261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692154919696:android:b37aa4f7a87cb750ba9395",
+        "android_client_info": {
+          "package_name": "com.example.tripmiracle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692154919696-b683fk0r4e83d5par1eiki727c31g4ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhD_YNOUKVoRpMk2qxCNs57maD-cMJ3Hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692154919696-b683fk0r4e83d5par1eiki727c31g4ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

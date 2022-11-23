@@ -1,40 +1,48 @@
 package com.example.tripmiracle;
 
 public class Booking {
-        private int roomNo;
-        private String historyDuration;
-        private String historyTime;
+        String name, date, duration;
+        int room;
 
-        public int getRoomNo() {
-                return roomNo;
+        public Booking() {
         }
 
-        public String getHistoryDuration() {
-                return historyDuration;
+        public Booking(String name, String date, String duration, int room) {
+                this.name = name;
+                this.date = date;
+                this.duration = duration;
+                this.room = room;
         }
 
-        public String getHistoryTime() {
-                return historyTime;
+        public String getName() {
+                return name;
         }
 
-        public void setRoomNo(int roomNo) {
-                this.roomNo = roomNo;
+        public void setName(String name) {
+                this.name = name;
         }
 
-        public void setHistoryDuration(String historyDuration) {
-                this.historyDuration = historyDuration;
+        public String getDate() {
+                return date;
         }
 
-        public void setHistoryTime(String historyTime) {
-                this.historyTime = historyTime;
+        public void setDate(String date) {
+                this.date = date;
         }
 
-        // constructor
-        public Booking(int roomNo, String historyDuration, String historyTime) {
-                this.roomNo = roomNo;
-                this.historyDuration = historyDuration;
-                this.historyTime = historyTime;
+        public String getDuration() {
+                return duration;
+        }
+
+        public void setDuration(String duration) {
+                this.duration = duration;
+        }
+
+        public int getRoom() {
+                return room;
+        }
+
+        public void setRoom(int room) {
+                this.room = room;
         }
 }
-
-

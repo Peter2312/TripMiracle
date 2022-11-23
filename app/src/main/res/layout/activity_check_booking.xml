@@ -16,41 +16,78 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/check_title"
-        android:textSize="50dp" />
+        android:textSize="50sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/username"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:hint="@string/usernameTxt"
+        android:importantForAutofill="no" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_room"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/history_room"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_date"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/history_date"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_duration"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:text="@string/book_return_homepage" />
+        android:ems="10"
+        android:hint="@string/history_duration"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
 
 </LinearLayout>

@@ -1,33 +1,45 @@
 package com.example.tripmiracle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 import android.widget.LinearLayout;
 
-import com.example.tripmiracle.databinding.ActivityHomePageBinding;
+import com.example.tripmiracle.databinding.ActivityCheckBookingBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class CheckBooking extends AppCompatActivity {
 
-    private ActivityHomePageBinding binding;
+    private static final String TAG = "CheckBooking";
+
+    private ActivityCheckBookingBinding binding;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private DocumentReference bookings = db.collection("booking").document();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_booking);
 
-        binding = ActivityHomePageBinding.inflate(getLayoutInflater());
+        binding = ActivityCheckBookingBinding.inflate(getLayoutInflater());
         LinearLayout view = binding.getRoot();
         setContentView(view);
 
-        binding.checkBooking.setOnClickListener(new View.OnClickListener() {
+        bookings.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CheckBooking.this, HomePage.class);
-                startActivity(intent);
-                finish();
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (document != null) {
+
+                } else {
+                    Log.d(TAG, "No such document");
+                }
             }
         });
     }

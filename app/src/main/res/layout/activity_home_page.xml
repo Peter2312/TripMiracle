@@ -6,7 +6,7 @@
     tools:context=".HomePage"
     android:orientation="vertical"
     android:background="@drawable/img_1"
-    android:padding="20dp">
+    >
 
     <TextView
         android:id="@+id/textview"
@@ -20,27 +20,43 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/username"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/homepage"
+        android:textSize="30dp" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/homepage"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:layout_weight="1"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/usernameDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/usernameTxt" />
+    </LinearLayout>
 
     <Button
-        android:id = "@+id/booking"
+        android:id="@+id/booking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/booking"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"  />
+        android:layout_marginTop="40dp"/>
 
     <Button
-        android:id = "@+id/checkBooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check"
@@ -48,7 +64,6 @@
         android:layout_marginTop="40dp"/>
 
     <Button
-        android:id = "@+id/bookHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/history"

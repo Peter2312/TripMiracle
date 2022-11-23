@@ -2,6 +2,7 @@
     <string name="app_name">TripMiracle</string>
     <string name="title">TripMiracle</string>
     <string name="username">USERNAME:</string>
+    <string name="email">EMAIL:</string>
     <string name="password">PASSWORD:</string>
     <string name="login">LOGIN</string>
     <string name="signup">SIGN UP</string>
@@ -15,25 +16,20 @@
     <string name="book_title">Booking</string>
     <string name="book_select_room">Select room</string>
     <string name="book_select_date">Select date</string>
-    <string name="book_display_date">Date</string>
     <string name="book_select_duration">Select duration</string>
-    <string name="book_select_nights">Nights</string>
-    <string name="book_return_homepage">Return To Home Page</string>
 
     <string name="check_title">Check current booking</string>
     <string name="check_room">Room</string>
     <string name="check_date">Date</string>
     <string name="check_duration">Duration</string>
-    <string name="check_return_homepage">Return To Home Page</string>
 
     <string name="history_title">Booking history</string>
     <string name="history_room">Room</string>
     <string name="history_date">Date</string>
     <string name="history_duration">Duration</string>
-    <string name="history_return_homepage">Return To Home Page</string>
 
-    <string name="history_row_roomNo">Room No</string>
-    <string name="history_row_time">Time</string>
-    <string name="history_row_duration">Duration</string>
-
+    <string name="usernameTxt">Username</string>
+    <string name="register">Register</string>
+    <string name="passwordTxt">Password</string>
+    <string name="emailTxt">Email</string>
 </resources>
