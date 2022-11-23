@@ -13,6 +13,7 @@
         android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/book_title"
@@ -21,6 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/username"
         android:textSize="20dp"
         android:layout_marginTop="20dp"/>
@@ -28,6 +30,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/book_select_room"
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
@@ -35,6 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="*insert recycler view of rooms*"
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
@@ -42,6 +46,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/book_select_date"
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
@@ -49,6 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/book_display_date"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
@@ -63,6 +69,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/book_select_duration"
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
@@ -75,6 +82,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
+        android:textColor="@color/black"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:ems="10"

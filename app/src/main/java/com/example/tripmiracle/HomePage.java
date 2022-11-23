@@ -11,6 +11,8 @@ import com.example.tripmiracle.databinding.ActivityHomePageBinding;
 
 public class HomePage extends AppCompatActivity {
 
+    public static final String USERNAME = "com.example.tripmiracle.USERNAME";
+
     private ActivityHomePageBinding binding;
 
     @Override
