@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 username = String.valueOf(textInputUsername.getText());
                 password = String.valueOf(textInputPassword.getText());
 
-                if(true) {
+                if(true) { //add check for login details
                     Intent i = new Intent(getApplicationContext(), HomePage.class);
                     getIntent().putExtra("username", username);
                     startActivity(i);

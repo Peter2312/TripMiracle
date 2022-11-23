@@ -71,11 +71,12 @@ public class SignUp extends AppCompatActivity{
             }
         });
 
-        binding.signupLogin.setOnClickListener(new View.OnClickListener() {
+        binding.signupLogin.setOnClickListener(new View.OnClickListener() { //send user back to login page
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }
