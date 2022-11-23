@@ -18,6 +18,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public HistoryAdapter(Context context, ArrayList<Booking> booking) {
             this.context = context;
             this.booking = booking;
+
     }
 
     @NonNull
