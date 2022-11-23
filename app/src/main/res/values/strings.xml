@@ -9,6 +9,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="confirm_password">CONFIRM PASSWORD:</string>
     <string name="create_account">Create Account</string>
+    <string name="email">EMAIL:</string>
 
     <string name="homepage">Welcome to TripMiracle!</string>
     <string name="booking">Book</string>
