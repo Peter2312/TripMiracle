@@ -21,9 +21,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/username"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/usernameBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_marginTop="20dp"/>
+        android:text="@string/usernameTxt" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,9 +56,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*insert calendar*"
+        android:text="@string/book_display_date"
         android:textSize="20dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:id="@+id/display_date"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_select_date"
+        android:id="@+id/select_date"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,20 +74,45 @@
         android:textSize="20dp"
         android:layout_marginTop="20dp" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*choices of 1-7 days, weeks, months*"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp" />
+        android:orientation="horizontal" >
 
+
+        <EditText
+            android:id="@+id/durationBooking"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/nights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_select_nights"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/bookbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/booking"
+        android:id="@+id/bookbtn"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="30dp" />
+
+   <!-- <Button
+        android:id="@+id/returnHomePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:text="@string/book_return_homepage"
+        tools:ignore="TouchTargetSizeCheck" />-->
 
 </LinearLayout>

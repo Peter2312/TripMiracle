@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.tripmiracle.databinding.ActivityCheckBookingBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,11 +35,16 @@ public class CheckBooking extends AppCompatActivity {
         bookings.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot document = task.getResult();
-                if (document != null) {
-
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document != null) {
+                        binding.roomCheckBooking.setText(document.getLong("roomNo").intValue());
+                    } else {
+                        Log.d(TAG, "No such document");
+                        Toast.makeText(CheckBooking.this, "No such document", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Log.d(TAG, "No such document");
+                    Log.w(TAG, "unable to retrieve document", task.getException());
                 }
             }
         });

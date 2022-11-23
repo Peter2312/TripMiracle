@@ -26,7 +26,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/usernameCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -43,7 +43,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/roomCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,7 +61,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/dateCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -79,7 +79,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/durationCheckBooking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
