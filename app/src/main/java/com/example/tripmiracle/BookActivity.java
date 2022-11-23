@@ -68,4 +68,11 @@ public class BookActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(BookActivity.this, HomePage.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -2,6 +2,7 @@
     <string name="app_name">TripMiracle</string>
     <string name="title">TripMiracle</string>
     <string name="username">USERNAME:</string>
+    <string name="email">EMAIL:</string>
     <string name="password">PASSWORD:</string>
     <string name="login">LOGIN</string>
     <string name="signup">SIGN UP</string>
@@ -36,5 +37,10 @@
     <string name="history_row_roomNo">Room No</string>
     <string name="history_row_time">Time</string>
     <string name="history_row_duration">Duration</string>
+
+    <string name="usernameTxt">Username</string>
+    <string name="register">Register</string>
+    <string name="passwordTxt">Password</string>
+    <string name="emailTxt">Email</string>
 
 </resources>

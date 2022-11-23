@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.tripmiracle.databinding.ActivityHistoryBinding;
 import com.example.tripmiracle.databinding.ActivityHomePageBinding;
 
 import java.util.ArrayList;
 
 public class History extends AppCompatActivity {
 
-    private ActivityHomePageBinding binding;
+    private ActivityHistoryBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +34,11 @@ public class History extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        binding = ActivityHomePageBinding.inflate(getLayoutInflater());
+        binding = ActivityHistoryBinding.inflate(getLayoutInflater());
         LinearLayout view = binding.getRoot();
         setContentView(view);
 
-        binding.bookHistory.setOnClickListener(new View.OnClickListener() {
+        binding.returnHomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(History.this, HomePage.class);
@@ -45,5 +46,12 @@ public class History extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(History.this, HomePage.class);
+        startActivity(intent);
+        finish();
     }
 }
