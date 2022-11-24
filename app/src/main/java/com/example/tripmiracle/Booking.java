@@ -1,17 +1,18 @@
 package com.example.tripmiracle;
 
 public class Booking {
-        String name, date, duration;
+        String name, date, duration, time;
         int room;
 
         public Booking() {
         }
 
-        public Booking(String name, String date, String duration, int room) {
+        public Booking(String name, String date, String duration, int room, String time) {
                 this.name = name;
                 this.date = date;
                 this.duration = duration;
                 this.room = room;
+                this.time = time;
         }
 
         public String getName() {
@@ -44,5 +45,13 @@ public class Booking {
 
         public void setRoom(int room) {
                 this.room = room;
+        }
+
+        public String getTime() {
+                return time;
+        }
+
+        public void setTime(String time) {
+                this.time = time;
         }
 }

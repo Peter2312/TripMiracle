@@ -15,10 +15,13 @@ import android.widget.Toast;
 import com.example.tripmiracle.databinding.ActivityBookBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.TimeZone;
 
 public class BookActivity extends AppCompatActivity {
@@ -28,7 +31,7 @@ public class BookActivity extends AppCompatActivity {
 
     private ActivityBookBinding binding;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private DocumentReference bookings = db.collection("booking").document();
+    private CollectionReference bookings = db.collection("booking");
     DatePickerDialog pickerDate;
 
     @Override
@@ -76,12 +79,16 @@ public class BookActivity extends AppCompatActivity {
 
         int room = 120;
 
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy '  ' HH:mm:ss");
+
+        String currentDateAndTime = sdf.format(new Date());
+
         binding.bookbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Booking booking = new Booking(intent.getStringExtra(USERNAME), binding.displayDate.getText().toString(),
-                        binding.durationBooking.getText().toString()+" "+binding.nights.getText().toString(), room);
-                bookings.set(booking).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        binding.durationBooking.getText().toString()+" "+binding.nights.getText().toString(), room, currentDateAndTime);
+                bookings.document(currentDateAndTime).set(booking).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()) {

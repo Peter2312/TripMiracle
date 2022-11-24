@@ -16,6 +16,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class CheckBooking extends AppCompatActivity {
@@ -36,31 +37,25 @@ public class CheckBooking extends AppCompatActivity {
         LinearLayout view = binding.getRoot();
         setContentView(view);
 
-        Query query = bookingList.orderBy("roomNo", Query.Direction.DESCENDING).limit(1);
+        Query query = bookingList.orderBy("time", Query.Direction.DESCENDING).limit(1);
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                binding.usernameCheckBooking.setText();
-                binding.roomCheckBooking.setText();
-                binding.dateCheckBooking.setText();
-                binding.durationCheckBooking.setText();
-            }
-        });
-
-        bookings.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document != null) {
-                        binding.roomCheckBooking.setText(document.getLong("roomNo").intValue());
-                    } else {
-                        Log.d(TAG, "No such document");
-                        Toast.makeText(CheckBooking.this, "No such document", Toast.LENGTH_SHORT).show();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        binding.usernameCheckBooking.setText(document.getString("name"));
+                        binding.roomCheckBooking.setText(document.getLong("room").toString());
+                        binding.dateCheckBooking.setText(document.getString("date"));
+                        binding.durationCheckBooking.setText(document.getString("duration"));
                     }
                 } else {
-                    Log.w(TAG, "unable to retrieve document", task.getException());
+                    Log.d(TAG, "Error getting documents: ", task.getException());
                 }
+
+                /*binding.usernameCheckBooking.setText();
+                binding.roomCheckBooking.setText();
+                binding.dateCheckBooking.setText();
+                binding.durationCheckBooking.setText();*/
             }
         });
     }

@@ -55,7 +55,8 @@ public class HomePage extends AppCompatActivity {
         binding.checkBookingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent2 = new Intent(HomePage.this, CheckBooking.class);
+                startActivity(intent2);
             }
         });
     }
