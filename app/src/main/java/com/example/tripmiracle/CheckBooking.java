@@ -51,11 +51,6 @@ public class CheckBooking extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "Error getting documents: ", task.getException());
                 }
-
-                /*binding.usernameCheckBooking.setText();
-                binding.roomCheckBooking.setText();
-                binding.dateCheckBooking.setText();
-                binding.durationCheckBooking.setText();*/
             }
         });
     }

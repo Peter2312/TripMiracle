@@ -22,6 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 import java.util.TimeZone;
 
 public class BookActivity extends AppCompatActivity {
@@ -33,6 +34,9 @@ public class BookActivity extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference bookings = db.collection("booking");
     DatePickerDialog pickerDate;
+    Random rand = new Random(); //instance of random class
+    int upperbound = 999;
+    int int_random = rand.nextInt(upperbound);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,13 +75,9 @@ public class BookActivity extends AppCompatActivity {
         binding.returnHomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(BookActivity.this, HomePage.class);
-                startActivity(intent);*/
                 finish();
             }
         });
-
-        int room = 120;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy '  ' HH:mm:ss");
 
@@ -87,7 +87,7 @@ public class BookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Booking booking = new Booking(intent.getStringExtra(USERNAME), binding.displayDate.getText().toString(),
-                        binding.durationBooking.getText().toString()+" "+binding.nights.getText().toString(), room, currentDateAndTime);
+                        binding.durationBooking.getText().toString()+" "+binding.nights.getText().toString(), int_random, currentDateAndTime);
                 bookings.document(currentDateAndTime).set(booking).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

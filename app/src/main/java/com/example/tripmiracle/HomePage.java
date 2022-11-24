@@ -59,5 +59,13 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+        binding.bookingHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(HomePage.this, BookingHistory.class);
+                startActivity(intent3);
+            }
+        });
     }
 }
